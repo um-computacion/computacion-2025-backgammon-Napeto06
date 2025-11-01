@@ -1,0 +1,39 @@
+[MASTER]
+ignore=.venv,venv,.env
+jobs=1
+load-plugins=
+extension-pkg-allow-list=
+
+[MESSAGES CONTROL]
+# Keep docstring checks enabled; do not disable C0114/C0115/C0116
+# Disable a few noisy rules that don’t add value here or are OK for simple data holders.
+disable=
+    C0330,
+    C0326,
+    R0903,
+    W0511
+
+[FORMAT]
+max-line-length=100
+
+[BASIC]
+# Permit either snake_case or the course-required __name__ style
+good-names=i,j,k,fp,die,p1,p2,ai,db
+variable-rgx=^([a-z_][a-z0-9_]*|__[a-z_][a-z0-9_]*__)$
+argument-rgx=^([a-z_][a-z0-9_]*|__[a-z_][a-z0-9_]*__)$
+attr-rgx=^([a-z_][a-z0-9_]*|__[a-z_][a-z0-9_]*__)$
+class-rgx=^([A-Z_][a-zA-Z0-9]+|__[A-Za-z0-9_]+__)$
+const-rgx=^([A-Z_][A-Z0-9_]*|__[A-Z0-9_]+__)$
+# Encourage docstrings
+docstring-min-length=10
+docstring-convention=google
+
+[TYPECHECK]
+ignore-mixin-members=yes
+
+[DESIGN]
+max-args=6
+max-attributes=12
+
+[REPORTS]
+score=no
